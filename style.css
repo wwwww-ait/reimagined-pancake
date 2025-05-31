@@ -1,0 +1,13 @@
+// 简单的留言板功能
+document.querySelector('form button').addEventListener('click', function(e) {
+    e.preventDefault();
+    const name = document.querySelector('form input').value;
+    const message = document.querySelector('form textarea').value;
+    
+    if (name && message) {
+        alert(`感谢 ${name} 的留言！我们会尽快查看~`);
+        document.querySelector('form').reset();
+    } else {
+        alert('请填写完整信息！');
+    }
+});
